@@ -1,4 +1,6 @@
-﻿export default function MovieCard({ pelicula }) {
+﻿import Button from "./Button.jsx";
+
+export default function MovieCard({ pelicula, esFavorita, onToggleFavorita }) {
   return (
     <div className="movie-card">
       <img src={pelicula.imagen} alt={pelicula.titulo} className="movie-img" />
@@ -10,9 +12,17 @@
         <div className="horarios">
           <strong>Horarios:</strong>
           <div className="tags">
-            {pelicula.horarios.map((h, i) => <span key={i} className="time">{h}</span>)}
+            {pelicula.horarios.map((h, i) => (
+              <span key={i} className="time">{h}</span>
+            ))}
           </div>
         </div>
+        <Button
+          variante={esFavorita ? "fav-active" : "outline"}
+          onClick={() => onToggleFavorita(pelicula.id)}
+        >
+          {esFavorita ? "★ En Favoritas" : "☆ Agregar a Favoritas"}
+        </Button>
       </div>
     </div>
   );

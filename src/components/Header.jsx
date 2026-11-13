@@ -1,4 +1,4 @@
-﻿export default function Header() {
+﻿export default function Header({ totalFavoritas }) {
   return (
     <header className="navbar">
       <div className="logo">
@@ -7,7 +7,7 @@
       </div>
       <nav>
         <a href="#cartelera">Cartelera</a>
-        <a href="#promociones">Promociones</a>
+        <span className="fav-counter">❤️ Favoritas: {totalFavoritas}</span>
       </nav>
     </header>
   );
