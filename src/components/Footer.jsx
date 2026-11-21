@@ -1,8 +1,9 @@
 ﻿export default function Footer() {
   return (
     <footer className="footer">
-      <p>© 2026 CineCentral Inc. - Todos los derechos reservados.</p>
-      <p>Contacto: info@cinecentral.com | Atencion al cliente</p>
+      <p>© 2026 CineCentral - Todos los derechos reservados.</p>
+      <p>Desarrollo de Aplicaciones Empresariales - Tecsup (C24)</p>
+      <p className="author-badge">Desarrollado por Jairo • Sesión 11: Comunicación entre Componentes</p>
     </footer>
   );
 }

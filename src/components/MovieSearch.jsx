@@ -1,23 +1,29 @@
 ﻿import { useState, useEffect } from "react";
 import Button from "./Button.jsx";
+import { useDebounce } from "../hooks/useDebounce.js";
 
-export default function MovieSearch({ onBuscar }) {
-  // Paso 6: Entrada controlada en el estado local
-  const [texto, setTexto] = useState("");
+export default function MovieSearch({ valorActual, onBuscar, onLimpiar }) {
+  const [texto, setTexto] = useState(valorActual || "");
+  const textoDebounced = useDebounce(texto, 400);
 
-  // Paso 7: Retardo (debounce) de 400ms antes de ejecutar el filtrado
+  // Sincronizar si el filtro se limpia desde afuera (ej. botón en MovieList o Banner)
   useEffect(() => {
-    const temporizador = setTimeout(() => {
-      console.log("Ejecutando filtrado con retardo para:", texto);
-      onBuscar(texto);
-    }, 400);
+    setTexto(valorActual);
+  }, [valorActual]);
 
-    return () => clearTimeout(temporizador);
-  }, [texto, onBuscar]);
+  // Notificar al padre cuando vence el debounce
+  useEffect(() => {
+    onBuscar(textoDebounced);
+  }, [textoDebounced, onBuscar]);
 
   const manejarSubmit = (e) => {
     e.preventDefault();
     onBuscar(texto);
+  };
+
+  const manejarLimpiar = () => {
+    setTexto("");
+    onLimpiar();
   };
 
   return (
@@ -32,6 +38,11 @@ export default function MovieSearch({ onBuscar }) {
       <Button type="submit" variante="primary">
         🔍 Buscar
       </Button>
+      {texto.length > 0 && (
+        <Button type="button" variante="secondary" onClick={manejarLimpiar}>
+          ✕ Limpiar
+        </Button>
+      )}
     </form>
   );
 }

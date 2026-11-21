@@ -1,10 +1,56 @@
 ﻿export const peliculasData = [
-  { id: 1, titulo: "Dune: Parte Dos", imagen: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500", sinopsis: "Paul Atreides se une a Chani y a los Fremen mientras busca venganza contra los conspiradores que destruyeron a su familia.", clasificacion: "13+", valoracion: 4.8, horarios: ["14:30", "17:45", "21:00"] },
-  { id: 2, titulo: "Oppenheimer", imagen: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=500", sinopsis: "La historia del fisico estadounidense J. Robert Oppenheimer y su papel en el desarrollo de la bomba atomica.", clasificacion: "16+", valoracion: 4.9, horarios: ["15:00", "18:30", "22:00"] },
-  { id: 3, titulo: "Spider-Man: Across the Spider-Verse", imagen: "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=500", sinopsis: "Miles Morales es catapultado a traves del Multiverso, donde se encuentra con un equipo de Spider-Personas.", clasificacion: "APT", valoracion: 4.7, horarios: ["13:00", "16:15", "19:00"] },
-  { id: 4, titulo: "The Batman", imagen: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500", sinopsis: "Cuando un asesino ataca a la elite politica de Gotham, Batman investiga la corrupcion oculta de la ciudad.", clasificacion: "16+", valoracion: 4.5, horarios: ["16:00", "19:30", "22:30"] },
-  { id: 5, titulo: "Avatar: El Camino del Agua", imagen: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500", sinopsis: "Jake Sully vive con su familia en Pandora hasta que una amenaza conocida regresa para terminar lo que empezo.", clasificacion: "13+", valoracion: 4.6, horarios: ["14:00", "18:00", "21:30"] },
-  { id: 6, titulo: "Interstellar", imagen: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500", sinopsis: "Un equipo de exploradores viaja a traves de un agujero de gusano en el espacio para asegurar la supervivencia humana.", clasificacion: "APT", valoracion: 4.9, horarios: ["15:30", "19:00"] },
-  { id: 7, titulo: "Godzilla y Kong", imagen: "https://images.unsplash.com/photo-1563089145-599997674d42?w=500", sinopsis: "Una aventura cinematografica que enfrenta al todopoderoso Kong y al temible Godzilla contra una colosal amenaza.", clasificacion: "APT", valoracion: 4.3, horarios: ["13:30", "16:00", "18:30"] },
-  { id: 8, titulo: "Inside Out 2", imagen: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500", sinopsis: "Nuevas emociones llegan a la mente de Riley justo cuando la sede central esta sufriendo una demolicion repentina.", clasificacion: "APT", valoracion: 4.8, horarios: ["12:00", "14:15", "16:30"] }
+  {
+    id: 1,
+    titulo: "Dune: Parte Dos",
+    clasificacion: "PG-13",
+    valoracion: 4.8,
+    sinopsis: "Paul Atreides se une a Chani y a los Fremen mientras busca venganza contra los conspiradores que destruyeron a su familia.",
+    horarios: ["16:00", "19:30", "22:45"],
+    imagen: "https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg"
+  },
+  {
+    id: 2,
+    titulo: "Oppenheimer",
+    clasificacion: "R",
+    valoracion: 4.9,
+    sinopsis: "La historia del físico estadounidense J. Robert Oppenheimer y su papel decisivo en el desarrollo de la bomba atómica.",
+    horarios: ["15:30", "19:00", "22:15"],
+    imagen: "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+  },
+  {
+    id: 3,
+    titulo: "Spider-Man: Across the Spider-Verse",
+    clasificacion: "PG",
+    valoracion: 4.9,
+    sinopsis: "Miles Morales regresa para una aventura épica que transportará al amigable vecino de Brooklyn a través del Multiverso.",
+    horarios: ["14:00", "17:15", "20:30"],
+    imagen: "https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg"
+  },
+  {
+    id: 4,
+    titulo: "The Batman",
+    clasificacion: "PG-13",
+    valoracion: 4.6,
+    sinopsis: "Cuando un sádico asesino deja atrás un rastro de pistas crípticas, Batman se aventura en el inframundo de Ciudad Gótica.",
+    horarios: ["18:00", "21:30"],
+    imagen: "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+  },
+  {
+    id: 5,
+    titulo: "Interstellar",
+    clasificacion: "PG-13",
+    valoracion: 4.9,
+    sinopsis: "Un equipo de exploradores viaja a través de un agujero de gusano en el espacio para asegurar la supervivencia de la humanidad.",
+    horarios: ["16:45", "20:15"],
+    imagen: "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+  },
+  {
+    id: 6,
+    titulo: "Blade Runner 2049",
+    clasificacion: "R",
+    valoracion: 4.5,
+    sinopsis: "El descubrimiento de un secreto enterrado durante mucho tiempo lleva al joven Blade Runner K a buscar a Rick Deckard.",
+    horarios: ["19:15", "22:30"],
+    imagen: "https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg"
+  }
 ];
